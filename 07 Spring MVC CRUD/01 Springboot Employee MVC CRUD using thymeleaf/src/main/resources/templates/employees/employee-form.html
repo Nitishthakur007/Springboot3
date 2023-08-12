@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <title>Add Employee</title>
+</head>
+<body>
+      <div class="container">
+        <h3>Employee Directory</h3>
+        <hr>
+
+        <p class="h4 mb-4">Save Employee</p>
+        <form action="#" th:action="@{/employees/save}"
+                         th:object="${employee}" method="post">
+        <input type="text" th:field="*{empId}"
+                class="form-control mb-4 w-25" placeholder="Employee Id">
+
+          <input type="text" th:field="*{fullName}"
+                 class="form-control mb-4 w-25" placeholder="Full Name">
+
+          <input type="text" th:field="*{jobTitle}"
+                 class="form-control mb-4 w-25" placeholder="Job Title">
+
+
+          <input type="text" th:field="*{department}"
+                 class="form-control mb-4 w-25" placeholder="Department">
+
+          <input type="text" th:field="*{businessUnit}"
+                 class="form-control mb-4 w-25" placeholder="Business Unit">
+
+          <input type="text" th:field="*{gender}"
+                 class="form-control mb-4 w-25" placeholder="Gender">
+
+          <input type="text" th:field="*{ethnicity}"
+                 class="form-control mb-4 w-25" placeholder="Ethnicity">
+
+          <input type="text" th:field="*{age}"
+                 class="form-control mb-4 w-25" placeholder="Age">
+
+          <input type="text" th:field="*{hireDate}"
+                 class="form-control mb-4 w-25" placeholder="Hire Date (MM/DD/YYYY)">
+
+          <input type="text" th:field="*{annualSalary}"
+                 class="form-control mb-4 w-25" placeholder="Annual Salary">
+
+          <input type="text" th:field="*{bonusPer}"
+                 class="form-control mb-4 w-25" placeholder="Bonus%">
+
+          <input type="text" th:field="*{country}"
+                 class="form-control mb-4 w-25" placeholder="Country">
+
+          <input type="text" th:field="*{city}"
+                 class="form-control mb-4 w-25" placeholder="City">
+
+          <input type="text" th:field="*{exitDate}"
+                 class="form-control mb-4 w-25" placeholder="Exit Date (MM/DD/YYYY)">
+
+          <button type="submit" class="btn btn-success col-2">Save</button>
+
+          <hr>
+          <a th:href="@{/employees/list}">Back to Employees List</a>
+
+        </form>
+      </div>
+</body>
+</html>
